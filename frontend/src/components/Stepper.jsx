@@ -16,7 +16,7 @@ const Stepper = () => {
     setError(null);
 
     // Mulai proses dan listen untuk updates
-    const eventSource = new EventSource("/api/process");
+    const eventSource = new EventSource("http://localhost:8000/api/process");
 
     eventSource.onmessage = (event) => {
       const data = JSON.parse(event.data);
